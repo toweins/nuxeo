@@ -1820,11 +1820,11 @@
     </site>
     <repository>
       <id>nuxeo-release</id>
-      <url>scpexe://amour.nuxeo.com/home/nexus/repositories/nuxeo-release</url>
+      <url>http://maven.nuxeo.org/nexus/content/repositories/nuxeo-release</url>
     </repository>
     <snapshotRepository>
       <id>nuxeo-snapshot</id>
-      <url>scpexe://amour.nuxeo.com/home/nexus/repositories/nuxeo-snapshot</url>
+      <url>http://maven.nuxeo.org/nexus/content/repositories/nuxeo-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 
