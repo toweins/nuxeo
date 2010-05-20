@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.nuxeo</groupId>
@@ -64,7 +63,9 @@
     <notifiers>
       <notifier>
         <type>mail</type>
-        <configuration><address>ecm-qa@lists.nuxeo.com</address></configuration>
+        <configuration>
+          <address>ecm-qa@lists.nuxeo.com</address>
+        </configuration>
       </notifier>
     </notifiers>
   </ciManagement>
@@ -481,7 +482,7 @@
         <artifactId>opencsv</artifactId>
         <version>1.7</version>
         <scope>provided</scope>
-      </dependency> 
+      </dependency>
       <dependency>
         <groupId>org.osgi</groupId>
         <artifactId>osgi-core</artifactId>
@@ -711,8 +712,8 @@
   <build>
     <extensions>
       <!--
-        This extension is used for the artifacts upload to the repository with the
-        deploy plugin
+        This extension is used for the artifacts upload to the repository with
+        the deploy plugin
       -->
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
@@ -954,9 +955,10 @@
             <configuration>
               <aggregate>true</aggregate>
               <maxmemory>512m</maxmemory>
-              <!--stylesheetfile>
-                ${basedir}/src/site/resources/css/jdstyle.css
-                </stylesheetfile-->
+              <!--
+                stylesheetfile> ${basedir}/src/site/resources/css/jdstyle.css
+                </stylesheetfile
+              -->
               <windowtitle>
                 Nuxeo Enterprise Platform 5.1 API Documentation
               </windowtitle>
@@ -1033,47 +1035,31 @@
               <linkJavadoc>true</linkJavadoc>
             </configuration>
           </plugin>
-          <!--plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-pmd-plugin</artifactId>
-            <configuration>
-            <aggregate>true</aggregate>
-            <targetJdk>1.5</targetJdk>
-            </configuration>
-            </plugin-->
+          <!--
+            plugin> <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId> <configuration>
+            <aggregate>true</aggregate> <targetJdk>1.5</targetJdk>
+            </configuration> </plugin
+          -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-report-plugin</artifactId>
           </plugin>
-          <!--plugin>
+          <!--
+            plugin> <groupId>org.codehaus.mojo</groupId>
+            <artifactId>taglist-maven-plugin</artifactId> <configuration> <tags>
+            <tag>@fixme</tag> <tag>FIXME</tag> <tag>@todo</tag> <tag>TODO</tag>
+            <tag>XXX</tag> <tag>REVIEW</tag> </tags> </configuration> </plugin
+          -->
+          <!--
+            plugin> <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId> <configuration>
+            <configLocation>checkstyle.xml</configLocation> </configuration>
+            </plugin> <plugin> <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId> </plugin> <plugin>
             <groupId>org.codehaus.mojo</groupId>
-            <artifactId>taglist-maven-plugin</artifactId>
-            <configuration>
-            <tags>
-            <tag>@fixme</tag>
-            <tag>FIXME</tag>
-            <tag>@todo</tag>
-            <tag>TODO</tag>
-            <tag>XXX</tag>
-            <tag>REVIEW</tag>
-            </tags>
-            </configuration>
-            </plugin-->
-          <!--plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <configuration>
-            <configLocation>checkstyle.xml</configLocation>
-            </configuration>
-            </plugin>
-            <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jdepend-maven-plugin</artifactId>
-            </plugin-->
+            <artifactId>jdepend-maven-plugin</artifactId> </plugin
+          -->
         </plugins>
       </reporting>
     </profile>
@@ -1105,8 +1091,8 @@
       </activation>
       <repositories>
         <repository>
-          <id>internal</id>
-          <url>http://maven.in.nuxeo.com/internal</url>
+          <id>internal-releases</id>
+          <url>http://maven.in.nuxeo.com/nexus/content/groups/internal-releases</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -1116,7 +1102,7 @@
         </repository>
         <repository>
           <id>internal-snapshots</id>
-          <url>http://maven.in.nuxeo.com/internal-snapshots</url>
+          <url>http://maven.in.nuxeo.com/nexus/content/groups/internal-snapshots</url>
           <releases>
             <enabled>false</enabled>
           </releases>
@@ -1128,8 +1114,8 @@
       </repositories>
       <pluginRepositories>
         <pluginRepository>
-          <id>internal</id>
-          <url>http://maven.in.nuxeo.com/internal</url>
+          <id>internal-releases</id>
+          <url>http://maven.in.nuxeo.com/nexus/content/groups/internal-releases</url>
           <name>Nuxeo virtual release repository</name>
           <releases>
             <enabled>true</enabled>
@@ -1140,12 +1126,74 @@
         </pluginRepository>
         <pluginRepository>
           <id>internal-snapshots</id>
-          <url>http://maven.in.nuxeo.com/internal-snapshots</url>
+          <url>http://maven.in.nuxeo.com/nexus/content/groups/internal-snapshots</url>
           <name>Nuxeo virtual snapshot repository</name>
           <releases>
             <enabled>false</enabled>
           </releases>
           <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+      <distributionManagement>
+        <snapshotRepository>
+          <id>daily-snapshots</id>
+          <url>http://maven.in.nuxeo.com/nexus/content/repositories/daily-snapshots</url>
+          <uniqueVersion>true</uniqueVersion>
+        </snapshotRepository>
+      </distributionManagement>
+    </profile>
+    <profile>
+      <id>qapriv</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>private-releases</id>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-releases</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>private-snapshots</id>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-snapshots</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>private-releases</id>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-releases</url>
+          <name>Nuxeo virtual release repository</name>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>private-snapshots</id>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-snapshots</url>
+          <name>Nuxeo virtual snapshot repository</name>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
             <enabled>true</enabled>
           </snapshots>
         </pluginRepository>
@@ -1153,11 +1201,12 @@
       <distributionManagement>
         <repository>
           <id>releases</id>
-          <url>http://maven.in.nuxeo.com/releases</url>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
           <id>snapshots</id>
-          <url>http://maven.in.nuxeo.com/snapshots</url>
+          <url>http://mavenpriv.in.nuxeo.com/nexus/content/repositories/snapshots</url>
+          <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
       </distributionManagement>
     </profile>
@@ -1323,7 +1372,7 @@
   <repositories>
     <repository>
       <id>public</id>
-      <url>http://maven.nuxeo.org/public</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1333,12 +1382,13 @@
     </repository>
     <repository>
       <id>public-snapshot</id>
-      <url>http://maven.nuxeo.org/public-snapshot</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
       <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
       </snapshots>
     </repository>
   </repositories>
@@ -1346,7 +1396,7 @@
   <pluginRepositories>
     <pluginRepository>
       <id>public</id>
-      <url>http://maven.nuxeo.org/public</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
       <name>Nuxeo virtual release repository</name>
       <releases>
         <enabled>true</enabled>
@@ -1357,13 +1407,14 @@
     </pluginRepository>
     <pluginRepository>
       <id>public-snapshot</id>
-      <url>http://maven.nuxeo.org/public-snapshot</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
       <name>Nuxeo virtual snapshot repository</name>
       <releases>
         <enabled>false</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
@@ -1374,12 +1425,13 @@
       <url>scpexe://gironde.nuxeo.com/home/mavenweb/site/</url>
     </site>
     <repository>
-      <id>nuxeo-release</id>
-      <url>scpexe://amour.nuxeo.com/home/nexus/repositories/nuxeo-release</url>
+      <id>public-releases</id>
+      <url>http://maven.in.nuxeo.com/nexus/content/repositories/public-releases</url>
     </repository>
     <snapshotRepository>
-      <id>nuxeo-snapshot</id>
-      <url>scpexe://amour.nuxeo.com/home/nexus/repositories/nuxeo-snapshot</url>
+      <id>public-snapshots</id>
+      <url>http://maven.in.nuxeo.com/nexus/content/repositories/public-snapshots</url>
+      <uniqueVersion>true</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
 
