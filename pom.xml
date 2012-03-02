@@ -145,6 +145,7 @@
     <weld.version>1.1.5.Final</weld.version>
     <jsf.version>2.0.2-FCS</jsf.version>
     <cdi.api.version>1.1.EDR1.2</cdi.api.version>
+    <richfaces.version>4.2.0.Final</richfaces.version>
 
   </properties>
 
@@ -2026,19 +2027,11 @@
       </dependency>
 
       <dependency>
-        <groupId>org.richfaces.framework</groupId>
-        <artifactId>richfaces-api</artifactId>
-        <version>3.3.1.GA</version>
-      </dependency>
-      <dependency>
-        <groupId>org.richfaces.framework</groupId>
-        <artifactId>richfaces-impl</artifactId>
-        <version>3.3.1.GA-NX5</version>
-      </dependency>
-      <dependency>
-        <groupId>org.richfaces.ui</groupId>
-        <artifactId>richfaces-ui</artifactId>
-        <version>3.3.1.GA-NX</version>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-bom</artifactId>
+        <version>${richfaces.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
       </dependency>
 
       <!-- OpenOffice.org -->
@@ -4579,6 +4572,21 @@
       <snapshots>
         <updatePolicy>always</updatePolicy>
         <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <!-- temporarily added, waiting for it to be added as nuxeo repo proxy -->
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
       </snapshots>
     </repository>
   </repositories>
