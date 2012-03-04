@@ -2028,7 +2028,8 @@
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator</artifactId>
-        <version>3.1.0.GA</version>
+        <!-- upgrade from 3.1.0.GA to comply with JSR 303 for CDI -->
+        <version>4.2.0.Final</version>
       </dependency>
 
       <dependency>
