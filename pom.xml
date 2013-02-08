@@ -1265,6 +1265,11 @@
       </dependency>
       <dependency>
         <groupId>org.nuxeo.ecm.webengine</groupId>
+        <artifactId>nuxeo-thumbnail</artifactId>
+        <version>${nuxeo.features.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.webengine</groupId>
         <artifactId>nuxeo-webengine-admin</artifactId>
         <version>${nuxeo.features.version}</version>
       </dependency>
