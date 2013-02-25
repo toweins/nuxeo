@@ -1530,12 +1530,12 @@
       <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-core</artifactId>
-        <version>2.3.2</version>
+        <version>3.5.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-analyzers</artifactId>
-        <version>2.3.2</version>
+        <version>3.5.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.directory.shared</groupId>
