@@ -1,4 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.nuxeo</groupId>
@@ -119,7 +120,7 @@
     <nuxeo.distribution.tools.version>1.13</nuxeo.distribution.tools.version>
     <nuxeo.ftest.version>1.7.2</nuxeo.ftest.version>
 
-    <tomcat.version>6.0.35</tomcat.version>
+    <tomcat.version>6.0.36</tomcat.version>
     <apacheds.version>1.5.1</apacheds.version>
     <apachedshared.version>0.9.7</apachedshared.version>
     <gwt.version>2.4.0</gwt.version>
@@ -1441,6 +1442,11 @@
       </dependency>
 
       <!-- commons -->
+      <dependency>                                                                                                                                                                                         
+        <groupId>commons-el</groupId>                                                                                                                                                                      
+        <artifactId>commons-el</artifactId>                                                                                                                                                                
+        <version>1.0</version>                                                                                                                                                                             
+      </dependency>   
       <dependency>
         <groupId>commons-collections</groupId>
         <artifactId>commons-collections</artifactId>
@@ -3137,6 +3143,19 @@
         <groupId>org.dts</groupId>
         <artifactId>jmyspell-core</artifactId>
         <version>1.0.0-beta-2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>apache-tomcat</artifactId>
+        <version>${tomcat.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>apache-tomcat</artifactId>
+        <classifier>light</classifier>
+        <version>${tomcat.version}</version>
+        <type>zip</type>
       </dependency>
       <dependency>
         <groupId>org.apache.tomcat</groupId>
