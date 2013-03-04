@@ -165,6 +165,13 @@
         <artifactId>nuxeo-common</artifactId>
         <version>${nuxeo.common.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.nuxeo.common</groupId>
+        <artifactId>nuxeo-common</artifactId>
+        <version>${nuxeo.runtime.version}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
 
       <!-- Nuxeo Runtime -->
       <dependency>
