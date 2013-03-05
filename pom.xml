@@ -154,7 +154,7 @@
     <eclipseVersion>${project.version}</eclipseVersion>
     <!-- Convenient property; prefer use of the right property (runtime/core/...) -->
     <nuxeo.platform.version>5.7-SNAPSHOT</nuxeo.platform.version>
-    <seam.version>2.1.1-SNAPSHOT</seam.version>
+    <seam.version>2.1.1-NX1</seam.version>
   </properties>
 
   <dependencyManagement>
@@ -3548,12 +3548,13 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+          <executable>${env.JAVA_HOME}/bin/javac</executable>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-      </plugin>
+       <plugin>                                                                                                                                                                                             
+        <groupId>org.jacoco</groupId>                                                                                                                                                                      
+        <artifactId>jacoco-maven-plugin</artifactId>                                                                                                                                                       
+      </plugin>                                                                                                                                                                                            
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
