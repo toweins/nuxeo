@@ -172,8 +172,8 @@
     <!-- Convenient property; prefer use of the right property (runtime/core/...) -->
     <nuxeo.platform.version>5.9.4-SNAPSHOT</nuxeo.platform.version>
     <seam.version>2.3.1.Final</seam.version>
-    <!--<nxseam.version>2.3.1.Final.NX1</nxseam.version>-->
-    <nxseam.version>2.3.1.Final</nxseam.version>
+    <nxseam.version>2.3.1.Final.NX1</nxseam.version>
+    <!--nxseam.version>2.3.1.Final</nxseam.version-->
     <!--
       https://community.jboss.org/wiki/RichFacesMigrationGuide33x-4xMigration
       https://community.jboss.org/wiki/RichFaces33-4xMigrationGuideUnleashed
