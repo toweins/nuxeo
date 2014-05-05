@@ -134,7 +134,8 @@
     <!-- ant-assembly-maven-plugin is only used as a plugin -->
     <ant.assembly.version>2.0.1</ant.assembly.version>
     <nuxeo.ftest.version>1.7.14</nuxeo.ftest.version>
-    <nuxeo.richfaces.version>4.3.5.Final</nuxeo.richfaces.version>
+    <richfaces.version>4.3.6.Final</richfaces.version>
+    <nuxeo.richfaces.version>4.3.6.Final-NX01</nuxeo.richfaces.version>
 
     <tomcat.version>7.0.42</tomcat.version>
     <apacheds.version>1.5.1</apacheds.version>
@@ -2099,22 +2100,22 @@
       <dependency>
         <groupId>org.richfaces.ui</groupId>
         <artifactId>richfaces-components-api</artifactId>
-        <version>${nuxeo.richfaces.version}</version>
+        <version>${richfaces.version}</version>
       </dependency>
       <dependency>
         <groupId>org.richfaces.ui</groupId>
         <artifactId>richfaces-components-ui</artifactId>
-        <version>${nuxeo.richfaces.version}</version>
+        <version>${richfaces.version}</version>
       </dependency>
       <dependency>
-	<groupId>org.richfaces.ui.core</groupId>
-	<artifactId>richfaces-ui-core-ui</artifactId>
-        <version>${nuxeo.richfaces.version}</version>
+	     <groupId>org.richfaces.ui.core</groupId>
+	     <artifactId>richfaces-ui-core-ui</artifactId>
+        <version>${richfaces.version}</version>
       </dependency>
       <dependency>
         <groupId>org.richfaces.core</groupId>
         <artifactId>richfaces-core-api</artifactId>
-        <version>${nuxeo.richfaces.version}</version>
+        <version>${richfaces.version}</version>
       </dependency>
       <dependency>
         <groupId>org.richfaces.core</groupId>
